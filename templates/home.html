@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nostradamus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/main.css')}}">
+</head>
+
+<body>
+    <script src="{{url_for('static', filename = 'jquery-3.4.1.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+
+    <nav class="navbar navbar-expand-md">
+      <div class="collapse navbar-collapse" id="main-navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Documentation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="description">
+
+      <h1>NOSTRADAMUS</h1>
+      <p>This app predicts the probability distribution of eight distinct emotions by analyzing your marathon picture!</p>
+
+
+    <div class="upload-btn-wrapper">
+      <form method = 'POST' enctype = "multipart/form-data">
+      <input type="file" name="myfile" />
+      <input type="submit" value="Upload">
+      </form>
+    </div>
+        
+    <br style = “line-height:20;”>
+    {{result1}}
+    <br style = “line-height:5;”>
+    {{result2}}
+    <br style = “line-height:20;”>
+    <br style = “line-height:20;”>
+    
+    </div>
+</body>
+</html>

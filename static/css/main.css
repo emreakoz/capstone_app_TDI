@@ -1,0 +1,36 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #E0E0E0;
+}
+/*--- navigation bar ---*/
+.navbar {
+  background:#202020;
+}
+.nav-link,
+.navbar-brand {
+  color: #E0E0E0;
+  cursor: pointer;
+}
+.nav-link {
+  margin-left: 1em !important;
+}
+.nav-link:hover {
+  color: #000;
+}
+
+.description {
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -35%);
+  text-align: center;
+}
+.description h1 {
+  color: #000;
+}
+.description p {
+  color: #404040;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
