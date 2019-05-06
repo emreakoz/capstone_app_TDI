@@ -20,8 +20,8 @@ def move_image(image_path, root):
     pass
 
 def retrieve_image():
-#    root = '/app'
-    root = '/Users/emre/apps/capstone_app/'
+    root = '/app'
+#    root = '/Users/emre/apps/capstone_app/'
     
     if glob.glob(root+'*.jpg'):
         image_path = glob.glob(root+'*.jpg')[0]
