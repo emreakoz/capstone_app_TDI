@@ -12,18 +12,8 @@ def index():
     else:
         im_file = request.files["myfile"]
         im_file.save(secure_filename(im_file.filename))
-        
-        print(request.form['ranking'])
-        
-        if request.form.get('ranking'):
-            ranking=request.form.get('ranking')
-            age=request.form.get('age')
-            gender=request.form.get('gender')
-            bq=request.form.get('bq')
-            printout1, printout2 = marathon_emotion_predictor(ranking,age,gender,bq)
-        else:
-            #path = '/Users/emre/apps/capstone_app/old_images/' + im_file.filename
-            printout1, printout2 = emotion_predictor()
+        #path = '/Users/emre/apps/capstone_app/old_images/' + im_file.filename
+        printout1, printout2 = emotion_predictor()
         
         return render_template('project.html', result1=printout1, 
                                result2 = printout2, result3 = im_file.filename)
