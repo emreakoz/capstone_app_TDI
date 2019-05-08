@@ -31,6 +31,45 @@
       <h1>NOSTRADAMUS</h1>
       <p>This app predicts the probability distribution of eight distinct emotions by analyzing your marathon picture!</p>
 
+    <div class=metanav>
+    <form id='dropdowns' method='post' action="project.html" >
+
+          Gender Ranking: <input type='text' name='ranking' placeholder='1234'/>
+
+          &nbsp;
+          &nbsp;
+          
+          Age: <select name='age'>
+          <option id='01' value="01">18-39</option>
+          <option id='02' value="02">40-44</option>
+          <option id='03' value="03">45-49</option>
+          <option id='04' value="04">50-54</option> 
+          <option id='05' value="05">55-59</option>
+          <option id='06' value="06">60-64</option>
+          <option id='07' value="07">65-69</option>
+          <option id='08' value="08">70+</option> 
+          </select>
+          
+          &nbsp;
+          &nbsp;
+
+          Gender: <select name='gender'>
+          <option id='01' value="01">Male</option>
+          <option id='02' value="02">Female</option>
+          </select>
+
+          &nbsp;
+          &nbsp;
+
+          BQ: <select name='bq'>
+          <option id='01' value="01">Yes</option>
+          <option id='02' value="02">No</option>
+          </select>
+    </form>
+    </div>
+    
+    <br style = “line-height:20;”>
+    <br style = “line-height:20;”>
 
     <div class="upload-btn-wrapper">
       <form method = 'POST' enctype = "multipart/form-data">
@@ -38,13 +77,7 @@
       <input type="submit" value="Upload">
       </form>
     </div>
-        
-    <br style = “line-height:20;”>
-    {{result1}}
-    <br style = “line-height:5;”>
-    {{result2}}
-    <br style = “line-height:20;”>
-    <br style = “line-height:20;”>
+    
     
     </div>
 </body>
