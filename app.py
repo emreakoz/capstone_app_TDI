@@ -13,10 +13,10 @@ def index():
         im_file = request.files["myfile"]
         im_file.save(secure_filename(im_file.filename))
         #path = '/Users/emre/apps/capstone_app/old_images/' + im_file.filename
-        printout1, printout2 = emotion_predictor()
+        emotion1,emotion2,emotion3 = emotion_predictor()
         
-        return render_template('project.html', result1=printout1, 
-                               result2 = printout2, result3 = im_file.filename)
+        return render_template('project.html', result1=emotion1, result2 = emotion2, 
+                               result3 = emotion3, result4 = im_file.filename)
 
 if __name__ == '__main__':
     app.run(debug=True)

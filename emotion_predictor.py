@@ -54,12 +54,11 @@ def emotion_predictor():
     top2_emotion, probs[probs.index(max(probs))] = probs.index(max(probs)), 0
     top3_emotion = probs.index(max(probs))
     
-    printout1 = 'You look {} in this picture!'.format(
-            emotions_dict[top1_emotion])
-    printout2 = 'The other two probable emotions are {} and {}.'.format(
-            emotions_dict_[top2_emotion], emotions_dict_[top3_emotion])
+    emotion1 = emotions_dict[top1_emotion]
+    emotion2 = emotions_dict_[top2_emotion]
+    emotion3 = emotions_dict_[top3_emotion]
     
-    return printout1, printout2
+    return emotion1,emotion2,emotion3
 
 def demographics_input_creator(ranking,age,gender,bq):
     mean,sd = 4608, 3911 ##numbers based on 600 marathon runners
